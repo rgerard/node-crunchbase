@@ -46,7 +46,7 @@ function createRequest(url, callback) {
         if (response.statusCode == 200) {
             callback(error, JSON.parse(body));
         } else {
-            callback(error, JSON.parse(body));
+            callback(error, body);
         }
     });
 }
