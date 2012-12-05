@@ -26,7 +26,7 @@ var crunchbase = require('crunchbase');
 crunchbase.init(apikey);
 
 // Search for a company name
-crunchbase.search('', function(error, results) {
+crunchbase.search('pickmoto', function(error, results) {
  if (!error) {
     console.log(results) // Print the search results
   }
