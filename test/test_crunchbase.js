@@ -1,9 +1,10 @@
-var crunchbase = require('../index');
+var crunchbase = require('../index'),
+    API_KEY = '';
 
 module.exports = {
     setUp: function (callback) {
         // Init the crunchbase object
-        crunchbase.init('twkhedbs48ubvqwjh8kvn7mc');
+        crunchbase.init(API_KEY);
         callback();
     },
 
