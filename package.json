@@ -1,0 +1,29 @@
+{
+  "name": "crunchbase",
+  "version": "0.1.0",
+  "description": "Node module that wraps the Crunchbase API",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodeunit test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/rgerard/node-crunchbase.git"
+  },
+  "keywords": [
+    "crunchbase",
+    "techcrunch",
+    "api"
+  ],
+  "author": "Ryan Gerard",
+  "engines" : {
+      "node": "*"
+  },
+  "homepage" : "https://github.com/rgerard/node-crunchbase",
+  "dependencies": {
+    "request" : ">= 0.0.1"
+  },
+  "devDependencies": {
+      "nodeunit": ">= 0.0.1"
+  }
+}
