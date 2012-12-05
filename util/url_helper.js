@@ -4,9 +4,9 @@ function getEntityUrl(entityType, name) {
 
     // URL should look like: http://api.crunchbase.com/v/1/Entity/Name.js
     return 'http://api.crunchbase.com/v/1/'
-        + entityType
+        + encodeURIComponent(entityType)
         + '/'
-        + name
+        + encodeURIComponent(name)
         + '.js?api_key='
         + config.apikey;
 }
@@ -24,7 +24,7 @@ function searchUrl(query) {
 
     // URL should look like: http://api.crunchbase.com/v/1/search.js
     return 'http://api.crunchbase.com/v/1/search.js?query='
-        + query
+        + encodeURIComponent(query)
         + '&api_key='
         + config.apikey;
 }
@@ -35,11 +35,11 @@ function getPostsUrl(entityType, name, firstName, lastName) {
     return 'http://api.crunchbase.com/v/1/'
         + entityType
         + '/posts?name='
-        + name
+        + encodeURIComponent(name)
         + '&first_name='
-        + firstName
+        + encodeURIComponent(firstName)
         + '&last_name='
-        + lastName
+        + encodeURIComponent(lastName)
         + '&api_key='
         + config.apikey;
 }
