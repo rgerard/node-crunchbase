@@ -44,7 +44,11 @@ function createRequest(url, callback) {
     request(url, function (error, response, body) {
 
         if (response.statusCode == 200) {
-            callback(error, JSON.parse(body));
+            try {
+                callback(error, JSON.parse(body));
+            } catch (error) {
+                callback(error, body);
+            }
         } else {
             callback(error, body);
         }
