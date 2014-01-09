@@ -50,7 +50,12 @@ function createRequest(url, callback) {
                 callback(error, body);
             }
         } else {
-            callback(error, body);
+            try{
+                callback(error, JSON.parse(body));
+            }
+            catch (error){
+                callback(error,body)
+            }
         }
     });
 }
